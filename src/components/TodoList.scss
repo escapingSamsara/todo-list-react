@@ -54,11 +54,10 @@ div {
     width: 100%;
     display: flex;
     align-items: center;
-
     padding: 0.25rem 0;
 
     .todo-input {
-      color: rgb(0, 0, 0);
+      color: #242424;
       background-color: rgba(255, 255, 255, 0.548);
       outline: none;
       border-radius: 20px;
@@ -71,6 +70,9 @@ div {
         border: 2px solid #2480e3;
         transition: all 0.15s ease-in-out;
       }
+    }
+    .check-todo-input {
+      width: 100%;
     }
   }
   .btn-box {
@@ -95,7 +97,9 @@ div {
     }
   }
   .check-btns {
-    width: 90%;
+    transition: all 0.15s ease-in-out;
+    margin-top: 0.5rem;
+    width: 100%;
   }
 }
 .todo-display-container {
@@ -103,7 +107,14 @@ div {
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.205);
   backdrop-filter: brightness(80%);
 }
-
+.check-btn:hover {
+  background-color: #2ecc71;
+  transition: all 0.15s ease-in-out;
+}
+.cancel-btn:hover {
+  background-color: #e74c3c;
+  transition: all 0.15s ease-in-out;
+}
 .todo-list {
   display: flex;
   flex-direction: column;
@@ -145,12 +156,15 @@ button {
   outline: none;
   border-radius: 5px;
   margin: 0 0.2rem;
-  &:hover {
-    background-color: #2480e3;
-    transition: all 0.15s ease-in-out;
-  }
 }
-
+.delete-todo-btn:hover {
+  background-color: #2ecc71;
+  transition: all 0.15s ease-in-out;
+}
+.edit-todo-btn:hover {
+  background-color: #2480e3;
+  transition: all 0.15s ease-in-out;
+}
 .delete-todo-btn,
 .edit-todo-btn,
 .cancel-btn,

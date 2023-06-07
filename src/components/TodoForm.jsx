@@ -25,14 +25,18 @@ const TodoForm = ({
               name="editTodo"
               type="text"
               id="todo-text"
-              className="todo-input"
+              className="todo-input check-todo-input"
               placeholder="edit todo"
               value={currentTodo.text}
               onChange={handleEditInputChange}
             />
           </div>
           <div className="btn-box check-btns">
-            <button type="submit" id="new-todo-submit" className="submit-btn">
+            <button
+              type="submit"
+              id="new-todo-submit"
+              className="submit-btn check-btn"
+            >
               <FontAwesomeIcon icon={faCheck} />
             </button>
             <button className="cancel-btn" onClick={() => setIsEditing(false)}>
