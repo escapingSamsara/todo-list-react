@@ -1,0 +1,40 @@
+// .background-container {
+//   z-index: 1;
+//   position: relative;
+//   height: 100%;
+//   width: 100%;
+//   padding: 1rem;
+//   border-radius: 10px;
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+
+//   &:before,
+//   &:after {
+//     border-radius: 50%;
+//     box-shadow: 0 0 1rem 0 rgba(0, 0, 0, 0.2);
+//     content: '';
+//     height: 300px;
+//     width: 300px;
+//     position: absolute;
+//   }
+//   &:before {
+//     animation: orbit 8s linear infinite;
+//     background: -moz-radial-gradient(top right, #f5f5f5, #1976d2);
+//     left: 0%;
+//   }
+//   &::after {
+//     animation: orbit 9s linear infinite reverse;
+//     background: -moz-radial-gradient(bottom right, #ffffff, #4db1c9);
+//     z-index: 0;
+//     left: 70%;
+//   }
+// }
+// @keyframes orbit {
+//   from {
+//     transform: rotate(0deg) translateX(80px) rotate(0deg);
+//   }
+//   to {
+//     transform: rotate(360deg) translateX(80px) rotate(-360deg);
+//   }
+// }

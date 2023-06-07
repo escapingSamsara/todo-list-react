@@ -37,10 +37,10 @@ const TodoForm = ({
               id="new-todo-submit"
               className="submit-btn check-btn"
             >
-              <FontAwesomeIcon icon={faCheck} />
+              <FontAwesomeIcon icon={faCheck} className="fa-icon" />
             </button>
             <button className="cancel-btn" onClick={() => setIsEditing(false)}>
-              <FontAwesomeIcon icon={faXmark} />
+              <FontAwesomeIcon icon={faXmark} className="fa-icon" />
             </button>
           </div>
         </form>
@@ -63,7 +63,7 @@ const TodoForm = ({
             />
             <div className="btn-box">
               <button id="new-todo-submit" className="add-todo-btn">
-                <FontAwesomeIcon icon={faPlus} />
+                <FontAwesomeIcon icon={faPlus} className="fa-icon" />
               </button>
             </div>
           </div>

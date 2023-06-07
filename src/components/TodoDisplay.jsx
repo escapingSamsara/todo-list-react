@@ -10,20 +10,19 @@ const TodoDisplay = ({ todos, handleDeleteClick, handleEditClick }) => {
           return (
             <li key={id} className="todo-list-item">
               <div className="todo-list-item-text">{text}</div>
-
               <div className="todo-list-btns">
                 <button
                   className="edit-todo-btn"
                   onClick={() => handleEditClick(todo)}
                 >
-                  <FontAwesomeIcon icon={faPen} />
+                  <FontAwesomeIcon icon={faPen} className="fa-icon" />
                 </button>
                 <button
                   type="button"
                   className="delete-todo-btn"
                   onClick={() => handleDeleteClick(id)}
                 >
-                  <FontAwesomeIcon icon={faCheck} />
+                  <FontAwesomeIcon icon={faCheck} className="fa-icon" />
                 </button>
               </div>
             </li>

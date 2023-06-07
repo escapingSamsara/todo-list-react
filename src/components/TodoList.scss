@@ -1,10 +1,8 @@
 .todo-list-container {
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.353);
   padding: 0.25rem;
-  height: 560px;
-  max-height: 600px;
-  width: 340px;
-  max-width: 420px;
+  height: 800px;
+  width: 550px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,16 +10,18 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
+  z-index: 5;
   .todo-list-header {
     height: 10%;
     width: 100%;
     h3 {
       display: flex;
       justify-content: center;
-      align-items: center;
+      align-items: flex-end;
       height: 100%;
       width: 100%;
-      font-size: 1.5rem;
+      font-size: 3rem;
+      letter-spacing: 0.5px;
     }
   }
   .todo-list-box {
@@ -57,17 +57,22 @@ div {
     padding: 0.25rem 0;
 
     .todo-input {
-      color: #242424;
-      background-color: rgba(255, 255, 255, 0.548);
+      color: #121212;
+      color: white;
+      background-color: rgba(103, 103, 103, 0.154);
       outline: none;
       border-radius: 20px;
       border: 2px solid transparent;
+      text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.086);
+      border: 1px solid rgba(255, 255, 255, 0.034);
+      box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.205);
+      backdrop-filter: blur(1px);
+      font-size: 1.5rem;
       padding: 0.2rem 0.5rem;
       width: 90%;
       margin-right: 0.25rem;
-      text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.086);
       &:focus {
-        border: 2px solid #2480e3;
+        border: 1.5px solid #2480e3;
         transition: all 0.15s ease-in-out;
       }
     }
@@ -87,9 +92,10 @@ div {
       height: 30px;
       width: 30px;
       transition: all 0.15s ease-in-out;
-      background-color: rgba(255, 255, 255, 0.548);
       background-color: #1e6fc5;
       text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.086);
+      height: 35px;
+      width: 35px;
       &:hover {
         background-color: #2480e3;
         transition: all 0.15s ease-in-out;
@@ -98,14 +104,21 @@ div {
   }
   .check-btns {
     transition: all 0.15s ease-in-out;
-    margin-top: 0.5rem;
+    margin-top: 1rem;
+    margin: 1rem 0;
     width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    padding: 0 8rem;
   }
 }
 .todo-display-container {
   width: 100%;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.205);
-  backdrop-filter: brightness(80%);
+}
+.check-btn {
+  margin: 0 0.5rem;
+  height: 35px;
+  width: 35px;
 }
 .check-btn:hover {
   background-color: #2ecc71;
@@ -127,13 +140,18 @@ div {
   text-shadow: 0px 0px 2px rgba(0, 0, 0, 0.086);
 
   .todo-list-item {
-    padding: 0.25rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     height: 100%;
     width: 95%;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.315);
+    border: 1px solid rgba(255, 255, 255, 0.034);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.205);
+    background-color: rgba(103, 103, 103, 0.089);
+    backdrop-filter: blur(1px);
+    border-radius: 10px;
+    padding: 0.25rem;
+    margin: 0.35rem 0;
     .todo-list-item-text {
       display: flex;
       justify-content: flex-start;
@@ -141,11 +159,14 @@ div {
       width: 90%;
       height: 100%;
       align-items: center;
+      font-size: 1.25rem;
     }
     .todo-list-btns {
-      display: flex;
-      flex-direction: row;
       width: 25%;
+      height: 100%;
+      display: flex;
+      justify-content: space-evenly;
+      align-items: center;
       height: 100%;
     }
   }
@@ -156,6 +177,9 @@ button {
   outline: none;
   border-radius: 5px;
   margin: 0 0.2rem;
+}
+.fa-icon {
+  font-size: 1rem;
 }
 .delete-todo-btn:hover {
   background-color: #2ecc71;
@@ -169,10 +193,117 @@ button {
 .edit-todo-btn,
 .cancel-btn,
 .submit-btn {
-  background-color: rgba(141, 141, 141, 0.315);
+  background-color: rgba(255, 255, 255, 0.168);
   color: white;
   backdrop-filter: blur(5px);
-  height: 25px;
-  width: 25px;
+  height: 35px;
+  width: 35px;
   border-radius: 50%;
+}
+
+// MOBILE VIEW
+
+@media screen and (max-width: 600px) {
+  .todo-list-container {
+    border-radius: 0;
+    height: 100%;
+    width: 100%;
+    max-width: 600px;
+    .todo-list-header {
+      height: 10%;
+      width: 100%;
+      h3 {
+        height: 100%;
+        width: 100%;
+        font-size: 3rem;
+        letter-spacing: 0.5px;
+      }
+    }
+    .todo-list-box {
+      padding: 0.25rem;
+      height: 90%;
+      width: 100%;
+    }
+  }
+  div {
+    border-radius: 10px;
+  }
+  .form-container {
+    // box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.205);
+    width: 100%;
+    margin: 0 auto;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    // backdrop-filter: brightness(80%);
+  }
+  .todo-form-container {
+    .form-box-check {
+      width: 100%;
+      .todo-input {
+        font-size: 1.5rem;
+        padding: 0.2rem 0.5rem;
+        width: 90%;
+        margin-right: 0.25rem;
+      }
+    }
+    .btn-box {
+      .add-todo-btn {
+        margin-left: 30px;
+        height: 3rem;
+        width: 3rem;
+      }
+    }
+    .check-btns {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 0 4rem;
+    }
+  }
+  .todo-display-container {
+    width: 100%;
+  }
+
+  .todo-list {
+    height: 100%;
+    max-height: 370px;
+    width: 100%;
+    padding: 0.2rem;
+
+    .todo-list-item {
+      padding: 0.35rem;
+      height: 100%;
+      width: 95%;
+      margin: 0.35rem 0;
+      .todo-list-item-text {
+        width: 90%;
+        height: 100%;
+        font-size: 1.5rem;
+      }
+      .todo-list-btns {
+        width: 25%;
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        height: 100%;
+      }
+    }
+  }
+  button {
+    padding: 0.1rem 0.2rem;
+    border-radius: 5px;
+    margin: 0 0.2rem;
+  }
+  .fa-icon {
+    font-size: 1.25rem;
+  }
+  .delete-todo-btn,
+  .edit-todo-btn,
+  .cancel-btn,
+  .submit-btn {
+    height: 2.5rem;
+    width: 2.5rem;
+  }
 }
