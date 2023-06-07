@@ -12,11 +12,9 @@
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-
   .todo-list-header {
     height: 10%;
     width: 100%;
-
     h3 {
       display: flex;
       justify-content: center;
@@ -44,9 +42,8 @@ div {
   justify-content: center;
   align-items: center;
   margin-bottom: 0.5rem;
-  backdrop-filter: brightness(80%);
+  // backdrop-filter: brightness(80%);
 }
-
 .todo-form-container {
   align-items: center;
   display: flex;
@@ -99,7 +96,6 @@ div {
     }
   }
 }
-
 .todo-display-container {
   width: 100%;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.205);
@@ -123,7 +119,22 @@ div {
     justify-content: space-between;
     align-items: center;
     height: 100%;
-    width: 100%;
+    width: 95%;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.315);
+    .todo-list-item-text {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+      width: 90%;
+      height: 100%;
+      align-items: center;
+    }
+    .todo-list-btns {
+      display: flex;
+      flex-direction: row;
+      width: 20%;
+      height: 100%;
+    }
   }
 }
 button {
@@ -142,7 +153,7 @@ button {
 .edit-todo-btn,
 .cancel-btn,
 .submit-btn {
-  background-color: rgba(255, 255, 255, 0.315);
+  background-color: rgba(141, 141, 141, 0.315);
   color: white;
   backdrop-filter: blur(5px);
   height: 25px;

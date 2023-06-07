@@ -9,7 +9,8 @@ const TodoDisplay = ({ todos, handleDeleteClick, handleEditClick }) => {
           const { id, text } = todo
           return (
             <li key={id} className="todo-list-item">
-              {text}
+              <div className="todo-list-item-text">{text}</div>
+
               <div className="todo-list-btns">
                 <button
                   className="edit-todo-btn"
