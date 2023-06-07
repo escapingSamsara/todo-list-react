@@ -1,4 +1,4 @@
-import bgImage from '../assets/bg4.jpg'
+import bgImage from '../assets/bg8.jpg'
 import TodoDisplay from './TodoDisplay'
 import TodoForm from './TodoForm'
 import './TodoList.scss'
@@ -19,7 +19,7 @@ const TodoList = ({
     <div
       className="todo-list-container"
       style={{
-        backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.305)), url(${bgImage})`,
+        backgroundImage: ` linear-gradient(rgba(0, 0, 0, 0.14), rgba(0, 0, 0, 0.051)), url(${bgImage})`,
       }}
     >
       <div className="todo-list-header">

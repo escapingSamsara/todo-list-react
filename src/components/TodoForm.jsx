@@ -1,4 +1,4 @@
-import { faCheck, faXmark } from '@fortawesome/free-solid-svg-icons'
+import { faCheck, faPlus, faXmark } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 const TodoForm = ({
@@ -57,11 +57,11 @@ const TodoForm = ({
               value={todo}
               onChange={handleInputChange}
             />
-          </div>
-          <div className="btn-box">
-            <button id="new-todo-submit" className="add-todo-btn">
-              add todo
-            </button>
+            <div className="btn-box">
+              <button id="new-todo-submit" className="add-todo-btn">
+                <FontAwesomeIcon icon={faPlus} />
+              </button>
+            </div>
           </div>
         </form>
       )}
