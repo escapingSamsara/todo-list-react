@@ -74,7 +74,6 @@ div {
     }
   }
   .btn-box {
-    width: 20%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -94,6 +93,9 @@ div {
         transition: all 0.15s ease-in-out;
       }
     }
+  }
+  .check-btns {
+    width: 90%;
   }
 }
 .todo-display-container {

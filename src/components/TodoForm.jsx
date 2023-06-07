@@ -31,7 +31,7 @@ const TodoForm = ({
               onChange={handleEditInputChange}
             />
           </div>
-          <div className="btn-box">
+          <div className="btn-box check-btns">
             <button type="submit" id="new-todo-submit" className="submit-btn">
               <FontAwesomeIcon icon={faCheck} />
             </button>
